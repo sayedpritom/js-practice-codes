@@ -4,22 +4,27 @@ class Car {
     constructor(brand) {
         this.carBrand = brand
     }
-    pop() {
-        return 'I have a ' + this.carBrand
+    show() {
+        return `I love ${this.carBrand}`
     }
 }
 
-class Auto extends Car {
-    constructor(brand, model) {
+class Model extends Car {
+    constructor(model, brand) {
         super(brand)
+        this.carBrand = brand
         this.carModel = model
     }
-    show() {
-        return 'I love ' + this.carModel + '&' + this.pop()
+    print() {
+        return 'I love ' + this.carBrand + ' I own a ' + this.carModel
     }
 }
 
-const x = new Car("corolla").pop()
-const y = new Auto("hyundai", "sonata " ).show()
+const x = new Model('Camry', 'Toyota').print()
+// Create an object with new keyword
+const y = new Object()
+y.name = 'BMW'
+y.year = 2023;
 
 console.log(y);
+console.log(x);
