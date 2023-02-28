@@ -12,19 +12,25 @@ class Car {
 class Model extends Car {
     constructor(model, brand) {
         super(brand)
-        this.carBrand = brand
         this.carModel = model
     }
     print() {
-        return 'I love ' + this.carBrand + ' I own a ' + this.carModel
+        return this.show() + ' I own a ' + this.carModel
     }
 }
 
-const x = new Model('Camry', 'Toyota').print()
-// Create an object with new keyword
-const y = new Object()
-y.name = 'BMW'
-y.year = 2023;
+const a = new Model('Camry', 'Toyota').print()
 
-console.log(y);
-console.log(x);
+// console.log(x);
+
+
+// js constructor function
+function Person(name, nationality, language, age, profession) {
+    this.name = name;
+    this.nationality = nationality;
+    this.language = language;
+    this.age = age;
+    this.profession = profession
+}
+
+const b = new Person('Sayed', 'Bangladeshi', 'Bangli', 24, 'programmer')
